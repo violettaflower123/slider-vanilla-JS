@@ -1,0 +1,135 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.page {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(207, 255, 204);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(207, 255, 204, 1) 35%,
+    rgba(255, 253, 193, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(207, 255, 204, 1) 35%,
+    rgba(255, 253, 193, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(207, 255, 204, 1) 35%,
+    rgba(255, 253, 193, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cfffcc",endColorstr="#fffdc1",GradientType=1);
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: orange;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.slider__container {
+  width: 900px;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 70%;
+  justify-content: center;
+}
+
+.slider__box {
+  display: flex;
+  transition: all ease 1s;
+  position: relative;
+}
+
+.slider__item {
+  width: 300px;
+  /* padding: 10px; */
+  transition: all ease 1s;
+  box-sizing: border-box;
+   opacity: .6;
+}
+
+.slider__item img {
+  width: 100%;
+  height: 100%;
+  transform: scale(.8);
+  border-radius: 10px;
+}
+
+.slider__item.slider__item_first {
+  margin-left: 300px;
+}
+
+.slider__item.active {
+  /* width: 320px; */
+  transform: scale(1.2);
+  padding: 0;
+  height: 400px;
+  opacity: 1;
+}
+
+.prev,
+.next {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.prev {
+  background-image: url(/images/prev.png);
+  left: -5%;
+}
+
+.next {
+  background-image: url(./images/next.png);
+  right: -5%;
+}
+
+.slider__dots {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.slider__single-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid orange;
+  margin: 0.25rem;
+}
+
+.slider__single-dot.active {
+  width: 16px;
+  height: 16px;
+  background-color: orange;
+}
