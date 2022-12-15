@@ -104,7 +104,7 @@ h1 {
 }
 
 .prev {
-  background-image: url(/images/prev.png);
+  background-image: url(./images/prev.png);
   left: -5%;
 }
 
